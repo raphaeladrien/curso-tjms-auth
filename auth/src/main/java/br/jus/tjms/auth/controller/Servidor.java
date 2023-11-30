@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/servidor")
 public class Servidor {
 
-    @GetMapping("/")
+    @GetMapping
     @PreAuthorize("hasRole('USER')")
     public String listarServidores() {
         return "listar servidores";
     }
 
-    @PostMapping("/")
+    @PostMapping
     @PreAuthorize("hasRole('ADMIN')")
     public String cadastrar() {
         return "cadastrar servidor";
